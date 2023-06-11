@@ -25541,7 +25541,8 @@ function cssStringToLoFParameters(cssString) {
   const parameters = cssString.split(";").filter((parameter) => parameter.trim().length > 0);
   const parametersObject = { style: {} };
   parameters.forEach((parameter) => {
-    const [key, value] = parameter.split(":");
+    const colon = parameter.indexOf(":");
+    const [key, value] = [parameter.slice(0, colon), parameter.slice(colon + 1)];
     if (key.length > 0 && value.length > 0) {
       if (key.trim() === "separator") {
         parametersObject.separator = value.trim();
@@ -25566,8 +25567,17 @@ function ObsidianLoFBlockErrorMessage({
 
 // src/components/codeblock/ObsidianLoFUninterpretedText.tsx
 var import_jsx_runtime2 = __toESM(require_jsx_runtime());
-function ObsidianLoFUninterpretedText({ text, placeRight }) {
-  return /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("span", { style: { marginLeft: placeRight ? "auto" : void 0, whiteSpace: "pre" }, children: text });
+function ObsidianLoFUninterpretedText({
+  text,
+  placeRight
+}) {
+  return /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(
+    "span",
+    {
+      style: { marginLeft: placeRight ? "auto" : void 0, whiteSpace: "pre" },
+      children: text
+    }
+  );
 }
 
 // src/components/codeblock/ObsidianLoFExpression.tsx
@@ -25593,37 +25603,48 @@ function ObsidianLoFExpressionLine({
   if (typeof children !== "string") {
     throw new Error("[LoFExpressionLine]: children must be a string");
   }
-  const content = children != null ? children : "";
-  const parts = splitExpressionBySeparator(content.toString(), separator);
-  return /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("div", { style: { margin: "1em", display: "flex", alignItems: "baseline", flexDirection: "row", flexWrap: "wrap" }, children: parts.length === 0 ? /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("br", {}, "br") : parts.map((part, i) => {
-    switch (part.type) {
-      case "text" /* text */:
-        return /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(
-          ObsidianLoFUninterpretedText,
-          {
-            text: part.value,
-            placeRight: parts.length - 1 === i
-          },
-          `text ${part.value}${i}`
-        );
-      case "lof" /* lof */:
-        return /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(
-          ObsidianLoFExpression,
-          {
-            expression: part.value
-          },
-          `expr ${part.value}${i}`
-        );
-      default:
-        return /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(
-          ObsidianLoFBlockErrorMessage,
-          {
-            msg: "Unknown part type"
-          },
-          `err ${part.value}${i}`
-        );
+  const parts = splitExpressionBySeparator(children.toString(), separator);
+  return /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(
+    "div",
+    {
+      style: {
+        margin: "1em",
+        display: "flex",
+        alignItems: "baseline",
+        flexDirection: "row",
+        flexWrap: "wrap"
+      },
+      children: parts.length === 0 ? /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("br", {}, "br") : parts.map((part, i) => {
+        switch (part.type) {
+          case "text" /* text */:
+            return /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(
+              ObsidianLoFUninterpretedText,
+              {
+                text: part.value,
+                placeRight: parts.length - 1 === i
+              },
+              `text ${part.value}${i}`
+            );
+          case "lof" /* lof */:
+            return /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(
+              ObsidianLoFExpression,
+              {
+                expression: part.value
+              },
+              `expr ${part.value}${i}`
+            );
+          default:
+            return /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(
+              ObsidianLoFBlockErrorMessage,
+              {
+                msg: "Unknown part type"
+              },
+              `err ${part.value}${i}`
+            );
+        }
+      })
     }
-  }) });
+  );
 }
 
 // src/components/settings/index.tsx
