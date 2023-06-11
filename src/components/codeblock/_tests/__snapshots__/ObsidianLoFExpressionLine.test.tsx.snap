@@ -1,0 +1,83 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ObsidianLoFExpressionLine and given we have an empty string renders correctly 1`] = `
+<div
+  style={
+    {
+      "alignItems": "baseline",
+      "display": "flex",
+      "flexDirection": "row",
+      "flexWrap": "wrap",
+      "margin": "1em",
+    }
+  }
+>
+  <br />
+</div>
+`;
+
+exports[`ObsidianLoFExpressionLine given we have an expression line renders correctly 1`] = `
+<div
+  style={
+    {
+      "alignItems": "baseline",
+      "display": "flex",
+      "flexDirection": "row",
+      "flexWrap": "wrap",
+      "margin": "1em",
+    }
+  }
+>
+  <div
+    className="cross "
+    id="Cross_1_0003cxkbtc_4"
+  >
+    <div
+      className="cross "
+      id="Cross_1_0003cxkbtc_1"
+    >
+      hello world
+    </div>
+     
+    <div
+      className="cross "
+      id="Cross_1_0003cxkbtc_3"
+    >
+      <div
+        className="cross "
+        id="Cross_1_0003cxkbtc_2"
+      />
+       
+    </div>
+     
+  </div>
+   
+  <div
+    className="cross "
+    id="Cross_1_0003cxkbtc_5"
+  />
+   
+   
+  <span
+    style={
+      {
+        "marginLeft": undefined,
+        "whiteSpace": "pre",
+      }
+    }
+  >
+    ((abc))
+  </span>
+  <div
+    className="cross "
+    id="Cross_2_00051echq_1"
+  />
+   
+  <div
+    className="cross "
+    id="Cross_2_00051echq_2"
+  />
+   
+   
+</div>
+`;

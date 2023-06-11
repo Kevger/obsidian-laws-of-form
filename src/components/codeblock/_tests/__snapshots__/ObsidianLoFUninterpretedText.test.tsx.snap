@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ObsidianLoFUninterpretedText given we have an uninterpreted text and it's placed left renders correctly 1`] = `
+<span
+  style={
+    {
+      "marginLeft": undefined,
+      "whiteSpace": "pre",
+    }
+  }
+>
+  (Lorem ipsum dolor () sit amet, consectetur adipiscing elit.)
+</span>
+`;
+
+exports[`ObsidianLoFUninterpretedText given we have an uninterpreted text and it's placed right renders correctly 1`] = `
+<span
+  style={
+    {
+      "marginLeft": "auto",
+      "whiteSpace": "pre",
+    }
+  }
+>
+  (Lorem ipsum dolor () sit amet, consectetur adipiscing elit.)
+</span>
+`;

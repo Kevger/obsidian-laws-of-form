@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ObsidianLofBlockErrorMessage given we have an error message renders correctly 1`] = `
+<div
+  style={
+    {
+      "color": "red",
+      "fontSize": "50%",
+      "margin": "1em",
+    }
+  }
+>
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+</div>
+`;

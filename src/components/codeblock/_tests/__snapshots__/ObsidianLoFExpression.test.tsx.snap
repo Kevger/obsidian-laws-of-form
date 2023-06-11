@@ -1,0 +1,373 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ObsidianLoFExpression given we have an non-primitive expression (((((((()))))))) renders correctly 1`] = `
+[
+  <div
+    className="cross "
+    id="Cross_1_0003cxkbtc_8"
+  >
+    <div
+      className="cross "
+      id="Cross_1_0003cxkbtc_7"
+    >
+      <div
+        className="cross "
+        id="Cross_1_0003cxkbtc_6"
+      >
+        <div
+          className="cross "
+          id="Cross_1_0003cxkbtc_5"
+        >
+          <div
+            className="cross "
+            id="Cross_1_0003cxkbtc_4"
+          >
+            <div
+              className="cross "
+              id="Cross_1_0003cxkbtc_3"
+            >
+              <div
+                className="cross "
+                id="Cross_1_0003cxkbtc_2"
+              >
+                <div
+                  className="cross "
+                  id="Cross_1_0003cxkbtc_1"
+                />
+                 
+              </div>
+               
+            </div>
+             
+          </div>
+           
+        </div>
+         
+      </div>
+       
+    </div>
+     
+  </div>,
+  " ",
+  " ",
+]
+`;
+
+exports[`ObsidianLoFExpression given we have an non-primitive expression (()) () () renders correctly 1`] = `
+[
+  <div
+    className="cross "
+    id="Cross_1_0003cxkbtc_2"
+  >
+    <div
+      className="cross "
+      id="Cross_1_0003cxkbtc_1"
+    />
+     
+  </div>,
+  " ",
+  <div
+    className="cross "
+    id="Cross_1_0003cxkbtc_3"
+  />,
+  " ",
+  <div
+    className="cross "
+    id="Cross_1_0003cxkbtc_4"
+  />,
+  " ",
+  " ",
+]
+`;
+
+exports[`ObsidianLoFExpression given we have an non-primitive expression (()) renders correctly 1`] = `
+[
+  <div
+    className="cross "
+    id="Cross_1_0003cxkbtc_2"
+  >
+    <div
+      className="cross "
+      id="Cross_1_0003cxkbtc_1"
+    />
+     
+  </div>,
+  " ",
+  " ",
+]
+`;
+
+exports[`ObsidianLoFExpression given we have an non-primitive expression ((hello world) ((abc))) renders correctly 1`] = `
+[
+  <div
+    className="cross "
+    id="Cross_1_0003cxkbtc_4"
+  >
+    <div
+      className="cross "
+      id="Cross_1_0003cxkbtc_1"
+    >
+      hello world
+    </div>
+     
+    <div
+      className="cross "
+      id="Cross_1_0003cxkbtc_3"
+    >
+      <div
+        className="cross "
+        id="Cross_1_0003cxkbtc_2"
+      >
+        abc
+      </div>
+       
+    </div>
+     
+  </div>,
+  " ",
+  " ",
+]
+`;
+
+exports[`ObsidianLoFExpression given we have an non-primitive expression ()()() renders correctly 1`] = `
+[
+  <div
+    className="cross "
+    id="Cross_1_0003cxkbtc_1"
+  />,
+  " ",
+  <div
+    className="cross "
+    id="Cross_1_0003cxkbtc_2"
+  />,
+  " ",
+  <div
+    className="cross "
+    id="Cross_1_0003cxkbtc_3"
+  />,
+  " ",
+  " ",
+]
+`;
+
+exports[`ObsidianLoFExpression given we have an non-primitive expression (a) renders correctly 1`] = `
+[
+  <div
+    className="cross "
+    id="Cross_1_0003cxkbtc_1"
+  >
+    a
+  </div>,
+  " ",
+  " ",
+]
+`;
+
+exports[`ObsidianLoFExpression given we have an primitive expression   renders correctly 1`] = `" "`;
+
+exports[`ObsidianLoFExpression given we have an primitive expression  renders correctly 1`] = `" "`;
+
+exports[`ObsidianLoFExpression given we have an primitive expression ( ) renders correctly 1`] = `
+[
+  <div
+    className="cross "
+    id="Cross_1_0003cxkbtc_1"
+  />,
+  " ",
+  " ",
+]
+`;
+
+exports[`ObsidianLoFExpression given we have an primitive expression () renders correctly 1`] = `
+[
+  <div
+    className="cross "
+    id="Cross_1_0003cxkbtc_1"
+  />,
+  " ",
+  " ",
+]
+`;
+
+exports[`ObsidianLoFExpression given we have an reentry expression (((((((([0]a $1)$6[2])[1]$3)[0]$4)a$5)$2[6])a[5]) [4]$0) renders correctly 1`] = `
+[
+  <div
+    className="cross "
+    id="Cross_1_0003cxkbtc0"
+  >
+    <div
+      className="cross "
+      id="Cross_1_0003cxkbtc_7"
+    >
+      <div
+        className="cross "
+        id="Cross_1_0003cxkbtc2"
+      >
+        <div
+          className="cross "
+          id="Cross_1_0003cxkbtc5"
+        >
+          <div
+            className="cross "
+            id="Cross_1_0003cxkbtc4"
+          >
+            <div
+              className="cross "
+              id="Cross_1_0003cxkbtc3"
+            >
+              <div
+                className="cross "
+                id="Cross_1_0003cxkbtc6"
+              >
+                <div
+                  className="cross "
+                  id="Cross_1_0003cxkbtc1"
+                >
+                  a
+                </div>
+                 
+              </div>
+               
+            </div>
+             
+          </div>
+           
+          a
+        </div>
+         
+      </div>
+       
+      a
+    </div>
+     
+  </div>,
+  " ",
+  " ",
+]
+`;
+
+exports[`ObsidianLoFExpression given we have an reentry expression ((a ((b [0] )c $1))(((d [2])(e $0))f[1]) g $2) renders correctly 1`] = `
+[
+  <div
+    className="cross "
+    id="Cross_1_0003cxkbtc2"
+  >
+    <div
+      className="cross "
+      id="Cross_1_0003cxkbtc_3"
+    >
+      <div
+        className="cross "
+        id="Cross_1_0003cxkbtc1"
+      >
+        <div
+          className="cross "
+          id="Cross_1_0003cxkbtc_1"
+        >
+          b
+        </div>
+         
+        c
+      </div>
+       
+      a
+    </div>
+     
+    <div
+      className="cross "
+      id="Cross_1_0003cxkbtc_7"
+    >
+      <div
+        className="cross "
+        id="Cross_1_0003cxkbtc_6"
+      >
+        <div
+          className="cross "
+          id="Cross_1_0003cxkbtc_4"
+        >
+          d
+        </div>
+         
+        <div
+          className="cross "
+          id="Cross_1_0003cxkbtc0"
+        >
+          e
+        </div>
+         
+      </div>
+       
+      f
+    </div>
+     
+    g
+  </div>,
+  " ",
+  " ",
+]
+`;
+
+exports[`ObsidianLoFExpression given we have an reentry expression ((a[0])(b[0])$0c)() renders correctly 1`] = `
+[
+  <div
+    className="cross "
+    id="Cross_1_0003cxkbtc0"
+  >
+    <div
+      className="cross "
+      id="Cross_1_0003cxkbtc_1"
+    >
+      a
+    </div>
+     
+    <div
+      className="cross "
+      id="Cross_1_0003cxkbtc_2"
+    >
+      b
+    </div>
+     
+    c
+  </div>,
+  " ",
+  <div
+    className="cross "
+    id="Cross_1_0003cxkbtc_4"
+  />,
+  " ",
+  " ",
+]
+`;
+
+exports[`ObsidianLoFExpression given we have an reentry expression ((a[0])b$0) renders correctly 1`] = `
+[
+  <div
+    className="cross "
+    id="Cross_1_0003cxkbtc0"
+  >
+    <div
+      className="cross "
+      id="Cross_1_0003cxkbtc_1"
+    >
+      a
+    </div>
+     
+    b
+  </div>,
+  " ",
+  " ",
+]
+`;
+
+exports[`ObsidianLoFExpression given we have an reentry expression ([0]$0Autopoiesis) renders correctly 1`] = `
+[
+  <div
+    className="cross "
+    id="Cross_1_0003cxkbtc0"
+  >
+    Autopoiesis
+  </div>,
+  " ",
+  " ",
+]
+`;
