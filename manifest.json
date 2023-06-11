@@ -2,9 +2,9 @@
 	"id": "laws-of-form-obsidian",
 	"name": "Laws of Form",
 	"version": "1.0.0",
-	"minAppVersion": "0.15.0",
-	"description": "This is a plugin for Obsidian that allows you to create and manage Laws of Form expressions.",
+	"minAppVersion": "1.19.0",
+	"description": "This is a plugin for Obsidian that allows you to create and manage Laws of Form expressions like ((a)) (b) = a (b).",
 	"author": "Kevin German",
 	"authorUrl": "https://kevingerman.de",
-	"isDesktopOnly": false
+	"isDesktopOnly": true
 }
