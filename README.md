@@ -1,5 +1,5 @@
 # Laws of Form Obsidian Plugin
-![[docs\exampleModulator.png]]
+![[exampleModulator.png]](/docs/exampleModulator.png)
 
 This plugin adds to Obsidian the ability to transform linear Laws of Form bracket expressions into their familiar two-dimensional graphical representation. 
 An introduction to [Laws of Form](https://en.wikipedia.org/wiki/Laws_of_Form) would go beyond the scope here. It is assumed that the reader is familiar with the concepts. 
@@ -23,7 +23,7 @@ Every code block starts with the `lof` keyword.
 ````
 
 This block will look rendered like the LoF formalism.
-![[docs\exampleSimple.png]]
+![[exampleSimple.png]](/docs/exampleSimple.png)
 
 ---
 
@@ -80,7 +80,7 @@ For example
 ```
 ````
 without separators would be rendered like this
-![[docs\exampleFalse.png]]
+![[exampleFalse.png]](/docs/exampleFalse.png)
 To render the expression above correctly, it must be split into three parts with the separator (by default "::") for correct display. 
 ````
 ```lof
@@ -88,7 +88,7 @@ To render the expression above correctly, it must be split into three parts with
 ```
 ````
 This results in the correct form
-![[docs\exampleCorrect.png]]
+![[exampleCorrect.png]](/docs/exampleCorrect.png)
 Everything between separators is just interpreted as plain text. Thus brackets "(),\[\]" and "$" will not be interpreted.
 The default separator can be individually overwritten using the separator keyword in the block parameters or globally inside the settings. 
 
@@ -103,7 +103,7 @@ The *last unclosed* separator will move the uninterpreted text to the right.
 ```
 ````
 will lead to
-![[docs\exampleEquations.png]]
+![[exampleEquations.png]](/docs/exampleEquations.png)
 
 ---
 
@@ -123,7 +123,7 @@ For example, if we want to have a red font color, set the font size to 22 pixels
 
 This block will look rendered like this
 
-![[docs\exampeStyling.png]]
+![[exampeStyling.png]](/docs/exampeStyling.png)
 
 **⚠️ Reducing the font size (e.g., font-size: 50%; font-size: 0.8em; font-size: 12px;) is the *most* important customization in case expressions are too long and wrap around.**
 
