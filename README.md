@@ -1,7 +1,7 @@
 # Laws of Form Obsidian Plugin
 ![[exampleModulator.png]](/docs/exampleModulator.png)
 
-This plugin adds to Obsidian the ability to transform linear Laws of Form bracket expressions into their familiar two-dimensional graphical representation. 
+This plugin adds to [Obsidian](https://obsidian.md/) the ability to transform linear Laws of Form bracket expressions into their familiar two-dimensional graphical representation. 
 An introduction to [Laws of Form](https://en.wikipedia.org/wiki/Laws_of_Form) would go beyond the scope here. It is assumed that the reader is familiar with the concepts. 
 
 ----
