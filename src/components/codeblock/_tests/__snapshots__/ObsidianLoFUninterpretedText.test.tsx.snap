@@ -2,10 +2,10 @@
 
 exports[`ObsidianLoFUninterpretedText given we have an uninterpreted text and it's placed left renders correctly 1`] = `
 <span
+  className="StyleObsidianLoFUninterpretedText"
   style={
     {
       "marginLeft": undefined,
-      "whiteSpace": "pre",
     }
   }
 >
@@ -15,10 +15,10 @@ exports[`ObsidianLoFUninterpretedText given we have an uninterpreted text and it
 
 exports[`ObsidianLoFUninterpretedText given we have an uninterpreted text and it's placed right renders correctly 1`] = `
 <span
+  className="StyleObsidianLoFUninterpretedText"
   style={
     {
       "marginLeft": "auto",
-      "whiteSpace": "pre",
     }
   }
 >

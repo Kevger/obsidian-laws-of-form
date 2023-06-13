@@ -5,6 +5,7 @@ import {
 import { ObsidianLoFUninterpretedText } from "./ObsidianLoFUninterpretedText";
 import { ObsidianLoFBlockErrorMessage } from "./ObsidianLoFBlockErrorMessage";
 import { ObsidianLoFExpression } from "./ObsidianLoFExpression";
+import "./styles.css";
 
 /**
  * Each line of a LoF block is rendered by this component. The line is split into parts by the separator. Each part is either a text or a LoF expression. The parts are then rendered by the appropriate component.
@@ -23,19 +24,11 @@ export function ObsidianLoFExpressionLine({
   if (typeof children !== "string") {
     throw new Error("[LoFExpressionLine]: children must be a string");
   }
-  
+
   const parts = splitExpressionBySeparator(children.toString(), separator);
 
   return (
-    <div
-      style={{
-        margin: "1em",
-        display: "flex",
-        alignItems: "baseline",
-        flexDirection: "row",
-        flexWrap: "wrap",
-      }}
-    >
+    <div className="StyleObsidianLoFExpressionLine">
       {parts.length === 0 ? (
         <br key="br" />
       ) : (

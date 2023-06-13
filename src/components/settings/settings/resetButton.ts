@@ -1,6 +1,6 @@
-import { Setting } from 'obsidian'
-import type LoFPlugin from 'src/main'
-import { DEFAULT_LOF_SETTINGS } from '..'
+import { Setting } from 'obsidian';
+import type LoFPlugin from 'src/main';
+import { DEFAULT_LOF_SETTINGS } from '..';
 
 /**
  * Creates a button that resets all settings to the default values
@@ -10,7 +10,7 @@ import { DEFAULT_LOF_SETTINGS } from '..'
  * @param onFinish Callback which is called when the button is clicked
  * @returns The created setting
  */
-export default function createResetButton (containerEl: HTMLElement, plugin: LoFPlugin, onFinish?: (args?: any) => void): Setting {
+export default function createResetButton(containerEl: HTMLElement, plugin: LoFPlugin, onFinish?: (args?: any) => void): Setting {
   return new Setting(containerEl)
     .setName('Reset to default')
     .setDesc('Reset all LoF settings to the default values')
@@ -20,8 +20,8 @@ export default function createResetButton (containerEl: HTMLElement, plugin: LoF
         .setWarning()
         .setTooltip('You`re about to reset all LoF settings to the default values. This action cannot be undone.')
         .onClick(async () => {
-          plugin.settings = Object.assign({}, DEFAULT_LOF_SETTINGS)
-          await plugin.saveSettings()
-          if (onFinish != null) onFinish()
-        }))
+          plugin.settings = Object.assign({}, DEFAULT_LOF_SETTINGS);
+          await plugin.saveSettings();
+          if (onFinish != null) onFinish();
+        }));
 };

@@ -10,7 +10,6 @@ import {
 
 describe("splitExpressionBySeparator()", () => {
     describe("given we a separator ::", () => {
-        const separator = "::";
         describe("and given we have a string separated by it", () => {
             it("should return an array of correct type/value tuples", () => {
                 const tuples = splitExpressionBySeparator("(()) :: = :: .", "::");

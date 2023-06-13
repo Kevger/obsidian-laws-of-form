@@ -25562,7 +25562,7 @@ var import_jsx_runtime = __toESM(require_jsx_runtime());
 function ObsidianLoFBlockErrorMessage({
   msg
 }) {
-  return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { style: { color: "red", margin: "1em", fontSize: "50%" }, children: msg });
+  return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "StyleObsidianLoFBlockErrorMessage", children: msg });
 }
 
 // src/components/codeblock/ObsidianLoFUninterpretedText.tsx
@@ -25574,7 +25574,8 @@ function ObsidianLoFUninterpretedText({
   return /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(
     "span",
     {
-      style: { marginLeft: placeRight ? "auto" : void 0, whiteSpace: "pre" },
+      style: { marginLeft: placeRight ? "auto" : void 0 },
+      className: "StyleObsidianLoFUninterpretedText",
       children: text
     }
   );
@@ -25604,47 +25605,35 @@ function ObsidianLoFExpressionLine({
     throw new Error("[LoFExpressionLine]: children must be a string");
   }
   const parts = splitExpressionBySeparator(children.toString(), separator);
-  return /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(
-    "div",
-    {
-      style: {
-        margin: "1em",
-        display: "flex",
-        alignItems: "baseline",
-        flexDirection: "row",
-        flexWrap: "wrap"
-      },
-      children: parts.length === 0 ? /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("br", {}, "br") : parts.map((part, i) => {
-        switch (part.type) {
-          case "text" /* text */:
-            return /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(
-              ObsidianLoFUninterpretedText,
-              {
-                text: part.value,
-                placeRight: parts.length - 1 === i
-              },
-              `text ${part.value}${i}`
-            );
-          case "lof" /* lof */:
-            return /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(
-              ObsidianLoFExpression,
-              {
-                expression: part.value
-              },
-              `expr ${part.value}${i}`
-            );
-          default:
-            return /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(
-              ObsidianLoFBlockErrorMessage,
-              {
-                msg: "Unknown part type"
-              },
-              `err ${part.value}${i}`
-            );
-        }
-      })
+  return /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("div", { className: "StyleObsidianLoFExpressionLine", children: parts.length === 0 ? /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("br", {}, "br") : parts.map((part, i) => {
+    switch (part.type) {
+      case "text" /* text */:
+        return /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(
+          ObsidianLoFUninterpretedText,
+          {
+            text: part.value,
+            placeRight: parts.length - 1 === i
+          },
+          `text ${part.value}${i}`
+        );
+      case "lof" /* lof */:
+        return /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(
+          ObsidianLoFExpression,
+          {
+            expression: part.value
+          },
+          `expr ${part.value}${i}`
+        );
+      default:
+        return /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(
+          ObsidianLoFBlockErrorMessage,
+          {
+            msg: "Unknown part type"
+          },
+          `err ${part.value}${i}`
+        );
     }
-  );
+  }) });
 }
 
 // src/components/settings/index.tsx
@@ -25903,18 +25892,17 @@ var LoFSettingTab = class extends import_obsidian9.PluginSettingTab {
       this.display();
     };
     containerEl.empty();
-    containerEl.createEl("h2", { text: "Laws of Form plugin settings" });
     createSettingTutorial(containerEl);
-    containerEl.createEl("h3", { text: "Parser settings" });
+    containerEl.createEl("h3", { text: "Parser" });
     createSeparatorSetting(containerEl, plugin, onFinish);
-    containerEl.createEl("h3", { text: "Style settings" });
+    containerEl.createEl("h3", { text: "Style" });
     createFontSizeSetting(containerEl, plugin, onFinish);
     createFontFamilySetting(containerEl, plugin, onFinish);
     createFontWeightSetting(containerEl, plugin, onFinish);
     createFontStyleSetting(containerEl, plugin, onFinish);
     createFontColorSetting(containerEl, plugin, onFinish);
     createBackgroundColorSetting(containerEl, plugin, onFinish);
-    containerEl.createEl("h3", { text: "Advanced settings" });
+    containerEl.createEl("h3", { text: "Advanced" });
     createRawCSSSetting(containerEl, plugin, onFinish);
     createResetButton(containerEl, plugin, onFinish);
     createAbout(containerEl);
@@ -25929,9 +25917,6 @@ function createAbout(containerEl) {
   });
 }
 function createSettingTutorial(containerEl) {
-  containerEl.createEl("h3", {
-    text: "Inline block styling"
-  });
   containerEl.createEl("p", {
     text: "These default settings are persistent and are applied to every LoF block. Each of these settings can be overwritten individually by the block parameters using inline CSS. The block parameters are defined in the header of a LoF block. The parameters are separated by a semicolon `;` "
   });
@@ -25955,7 +25940,13 @@ function createSettingTutorial(containerEl) {
   });
   containerEl.createEl("br");
   containerEl.createEl("a", {
-    text: "Learn more about the plugin (also available as a React library)",
+    text: "Tutorial & Source Code",
+    href: "https://github.com/Kevger/obsidian-laws-of-form/"
+  });
+  containerEl.createEl("br");
+  containerEl.createEl("br");
+  containerEl.createEl("a", {
+    text: "LoF Playground",
     href: "https://lof-react.web.app/"
   });
 }

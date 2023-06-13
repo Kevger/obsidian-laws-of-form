@@ -1,7 +1,7 @@
-import { Setting } from 'obsidian'
-import { type CSSProperties } from 'react'
-import type LoFPlugin from 'src/main'
-import { cssStringToLoFParameters } from 'src/utils'
+import { Setting } from 'obsidian';
+import { type CSSProperties } from 'react';
+import type LoFPlugin from 'src/main';
+import { cssStringToLoFParameters } from 'src/utils';
 
 /**
  * Creates a setting to set raw css.
@@ -10,7 +10,7 @@ import { cssStringToLoFParameters } from 'src/utils'
  * @param onFinish Callback function to call when the user is done with this setting -> `focusout` event.
  * @returns The created setting
  */
-export default function createRawCSSSetting (containerEl: HTMLElement, plugin: LoFPlugin, onFinish?: (args?: any) => void): Setting {
+export default function createRawCSSSetting(containerEl: HTMLElement, plugin: LoFPlugin, onFinish?: (args?: any) => void): Setting {
   const settings = new Setting(containerEl)
     .setName('raw css')
     .setDesc('Add or modify the raw css of the LoF expressions for full customization. For example, to change the color of the text, use `color: red;`')
@@ -19,25 +19,25 @@ export default function createRawCSSSetting (containerEl: HTMLElement, plugin: L
         .setPlaceholder('font-color: red; background-color: blue; ...')
         .setValue(reactCSSToString(plugin.settings.blockSettings.style))
         .onChange(async (value) => {
-          const parameters = cssStringToLoFParameters(value)
+          const parameters = cssStringToLoFParameters(value);
           plugin.settings.blockSettings = {
             ...parameters
-          }
-          await plugin.saveSettings()
-        })
-      text.inputEl.style.width = '100%'
-      text.inputEl.style.minHeight = '16vh'
-    })
-  settings.descEl.createEl('br')
+          };
+          await plugin.saveSettings();
+        });
+      text.inputEl.style.width = '100%';
+      text.inputEl.style.minHeight = '16vh';
+    });
+  settings.descEl.createEl('br');
   settings.descEl.createEl('a', {
     text: 'More information about inline css',
     href: 'https://www.w3schools.com/cssref/index.php'
-  })
+  });
   settings.controlEl.addEventListener('focusout', () => {
-    if (onFinish != null) onFinish()
-  })
+    if (onFinish != null) onFinish();
+  });
 
-  return settings
+  return settings;
 };
 
 /**
@@ -51,13 +51,13 @@ export default function createRawCSSSetting (containerEl: HTMLElement, plugin: L
  * @example
  * reactCSSToString({fontSize: "16px", color: "blue"}) // returns "font-size:16px\ncolor: blue;"
  */
-function reactCSSToString (css: CSSProperties): string {
-  let cssString = ''
+function reactCSSToString(css: CSSProperties): string {
+  let cssString = '';
   for (const [key, value] of Object.entries(css)) {
     const kebabKey = key
       .replace(/([a-z0-9]|(?=[A-Z]))([A-Z])/g, '$1-$2')
-      .toLowerCase()
-    cssString += `${kebabKey}: ${value as string};\n`
+      .toLowerCase();
+    cssString += `${kebabKey}: ${value as string};\n`;
   }
-  return cssString
+  return cssString;
 }

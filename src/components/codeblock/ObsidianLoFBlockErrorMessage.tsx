@@ -1,3 +1,5 @@
+import "./styles.css";
+
 /**
  * Component to display error messages which appear in the code block
  *
@@ -9,7 +11,5 @@ export function ObsidianLoFBlockErrorMessage({
 }: {
   msg: string;
 }): JSX.Element {
-  return (
-    <div style={{ color: "red", margin: "1em", fontSize: "50%" }}>{msg}</div>
-  );
+  return <div className="StyleObsidianLoFBlockErrorMessage">{msg}</div>;
 }

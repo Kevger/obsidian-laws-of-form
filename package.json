@@ -1,7 +1,7 @@
 {
   "name": "laws-of-form-obsidian",
-  "version": "1.0.0",
-  "description": "A obsidian plugin to render laws of form expressions",
+  "version": "1.0.1",
+  "description": "Allows you to create, manage and display Laws of Form expressions like ((a)) (b) = a (b).",
   "main": "main.js",
   "scripts": {
     "dev": "node esbuild.config.mjs",

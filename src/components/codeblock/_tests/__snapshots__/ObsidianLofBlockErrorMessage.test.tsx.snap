@@ -2,13 +2,7 @@
 
 exports[`ObsidianLofBlockErrorMessage given we have an error message renders correctly 1`] = `
 <div
-  style={
-    {
-      "color": "red",
-      "fontSize": "50%",
-      "margin": "1em",
-    }
-  }
+  className="StyleObsidianLoFBlockErrorMessage"
 >
   Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 </div>

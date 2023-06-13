@@ -1,3 +1,5 @@
+import "./styles.css";
+
 /**
  * React component for displaying uninterpreted text in a code block.
  *
@@ -13,7 +15,8 @@ export function ObsidianLoFUninterpretedText({
 }): JSX.Element {
   return (
     <span
-      style={{ marginLeft: placeRight ? "auto" : undefined, whiteSpace: "pre" }}
+      style={{ marginLeft: placeRight ? "auto" : undefined }}
+      className="StyleObsidianLoFUninterpretedText"
     >
       {text}
     </span>

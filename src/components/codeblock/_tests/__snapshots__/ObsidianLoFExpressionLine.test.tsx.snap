@@ -2,15 +2,7 @@
 
 exports[`ObsidianLoFExpressionLine and given we have an empty string renders correctly 1`] = `
 <div
-  style={
-    {
-      "alignItems": "baseline",
-      "display": "flex",
-      "flexDirection": "row",
-      "flexWrap": "wrap",
-      "margin": "1em",
-    }
-  }
+  className="StyleObsidianLoFExpressionLine"
 >
   <br />
 </div>
@@ -18,15 +10,7 @@ exports[`ObsidianLoFExpressionLine and given we have an empty string renders cor
 
 exports[`ObsidianLoFExpressionLine given we have an expression line renders correctly 1`] = `
 <div
-  style={
-    {
-      "alignItems": "baseline",
-      "display": "flex",
-      "flexDirection": "row",
-      "flexWrap": "wrap",
-      "margin": "1em",
-    }
-  }
+  className="StyleObsidianLoFExpressionLine"
 >
   <div
     className="cross "
@@ -59,10 +43,10 @@ exports[`ObsidianLoFExpressionLine given we have an expression line renders corr
    
    
   <span
+    className="StyleObsidianLoFUninterpretedText"
     style={
       {
         "marginLeft": undefined,
-        "whiteSpace": "pre",
       }
     }
   >

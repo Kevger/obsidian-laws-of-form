@@ -1,5 +1,5 @@
-import { Setting } from 'obsidian'
-import type LoFPlugin from 'src/main'
+import { Setting } from 'obsidian';
+import type LoFPlugin from 'src/main';
 
 /**
  * Creates a color picker setting for the font color
@@ -9,7 +9,7 @@ import type LoFPlugin from 'src/main'
  * @param onFinish Callback function to call when the user is done with this setting
  * @returns The color picker which is maintained by obsidian
  */
-export function createFontColorSetting (containerEl: HTMLElement, plugin: LoFPlugin, onFinish?: (args?: any) => void): Setting {
+export function createFontColorSetting(containerEl: HTMLElement, plugin: LoFPlugin, onFinish?: (args?: any) => void): Setting {
   return new Setting(containerEl)
     .setName('color')
     .setDesc('Color of the LoF expression')
@@ -17,11 +17,11 @@ export function createFontColorSetting (containerEl: HTMLElement, plugin: LoFPlu
       colorPicker
         .setValue(colorToHex(plugin.settings.blockSettings.style.color))
         .onChange(async (value) => {
-          plugin.settings.blockSettings.style.color = value
-          await plugin.saveSettings()
-          if (onFinish != null) onFinish()
-        })
-    })
+          plugin.settings.blockSettings.style.color = value;
+          await plugin.saveSettings();
+          if (onFinish != null) onFinish();
+        });
+    });
 };
 
 /**
@@ -32,7 +32,7 @@ export function createFontColorSetting (containerEl: HTMLElement, plugin: LoFPlu
  * @param onFinish Callback function to call when the user is done with this setting
  * @returns The color picker which is maintained by obsidian
  */
-export function createBackgroundColorSetting (containerEl: HTMLElement, plugin: LoFPlugin, onFinish?: (args?: any) => void): Setting {
+export function createBackgroundColorSetting(containerEl: HTMLElement, plugin: LoFPlugin, onFinish?: (args?: any) => void): Setting {
   return new Setting(containerEl)
     .setName('background-color')
     .setDesc('Background color of the LoF expression')
@@ -40,11 +40,11 @@ export function createBackgroundColorSetting (containerEl: HTMLElement, plugin: 
       colorPicker
         .setValue(colorToHex(plugin.settings.blockSettings.style.backgroundColor))
         .onChange(async (value) => {
-          plugin.settings.blockSettings.style.backgroundColor = value
-          await plugin.saveSettings()
-          if (onFinish != null) onFinish()
-        })
-    })
+          plugin.settings.blockSettings.style.backgroundColor = value;
+          await plugin.saveSettings();
+          if (onFinish != null) onFinish();
+        });
+    });
 }
 
 /**
@@ -56,10 +56,10 @@ export function createBackgroundColorSetting (containerEl: HTMLElement, plugin: 
  * @example
  * colorToHex("red"); // returns "#ff0000"
  */
-export function colorToHex (color: any): string {
-  const ctx = document.createElement('canvas').getContext('2d')
-  if (ctx == null) return ''
+export function colorToHex(color: any): string {
+  const ctx = document.createElement('canvas').getContext('2d');
+  if (ctx == null) return '';
 
-  ctx.fillStyle = color
-  return ctx.fillStyle as string
+  ctx.fillStyle = color;
+  return ctx.fillStyle as string;
 }
