@@ -2,7 +2,7 @@
 	"id": "laws-of-form",
 	"name": "Laws of Form",
 	"version": "1.0.1",
-	"minAppVersion": "1.19.0",
+	"minAppVersion": "1.1.9",
 	"description": "Allows you to create, manage and display Laws of Form expressions like ((a)) (b) = a (b).",
 	"author": "Kevin German",
 	"authorUrl": "https://kevingerman.de",
